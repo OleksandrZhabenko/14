@@ -58,37 +58,37 @@ durationF y = do
       z <- y
       basicNoteDurationS <- basicNoteDuration      
       let bn = case z of
-              "0000" -> (15*fromInteger basicNoteDurationS)/800
-              "000" -> (7*fromInteger basicNoteDurationS)/400
-              "00" -> (3*fromInteger basicNoteDurationS)/200
+              "03" -> (15*fromInteger basicNoteDurationS)/800
+              "02" -> (7*fromInteger basicNoteDurationS)/400
+              "01" -> (3*fromInteger basicNoteDurationS)/200
               "0" -> (fromInteger basicNoteDurationS)/100
-              "1000" -> (15*fromInteger basicNoteDurationS)/1600
-              "100" -> (7*fromInteger basicNoteDurationS)/800              
-              "10" -> (3*fromInteger basicNoteDurationS)/400
+              "13" -> (15*fromInteger basicNoteDurationS)/1600
+              "12" -> (7*fromInteger basicNoteDurationS)/800              
+              "11" -> (3*fromInteger basicNoteDurationS)/400
               "1" -> (fromInteger basicNoteDurationS)/200
-              "2000" -> (15*fromInteger basicNoteDurationS)/3200
-              "200" -> (7*fromInteger basicNoteDurationS)/1600
-              "20" -> (3*fromInteger basicNoteDurationS)/800              
+              "23" -> (15*fromInteger basicNoteDurationS)/3200
+              "22" -> (7*fromInteger basicNoteDurationS)/1600
+              "21" -> (3*fromInteger basicNoteDurationS)/800              
               "2" -> (fromInteger basicNoteDurationS)/400
-              "3000" -> (15*fromInteger basicNoteDurationS)/6400
-              "300" -> (7*fromInteger basicNoteDurationS)/3200
-              "30" -> (3*fromInteger basicNoteDurationS)/1600
+              "33" -> (15*fromInteger basicNoteDurationS)/6400
+              "32" -> (7*fromInteger basicNoteDurationS)/3200
+              "31" -> (3*fromInteger basicNoteDurationS)/1600
               "3" -> (fromInteger basicNoteDurationS)/800
-              "4000" -> (15*fromInteger basicNoteDurationS)/12800
-              "400" -> (7*fromInteger basicNoteDurationS)/6400
-              "40" -> (3*fromInteger basicNoteDurationS)/3200
+              "43" -> (15*fromInteger basicNoteDurationS)/12800
+              "42" -> (7*fromInteger basicNoteDurationS)/6400
+              "41" -> (3*fromInteger basicNoteDurationS)/3200
               "4" -> (fromInteger basicNoteDurationS)/1600
-              "5000" -> (15*fromInteger basicNoteDurationS)/25600
-              "500" -> (7*fromInteger basicNoteDurationS)/12800
-              "50" -> (3*fromInteger basicNoteDurationS)/6400
+              "53" -> (15*fromInteger basicNoteDurationS)/25600
+              "52" -> (7*fromInteger basicNoteDurationS)/12800
+              "51" -> (3*fromInteger basicNoteDurationS)/6400
               "5" -> (fromInteger basicNoteDurationS)/3200
-              "6000" -> (15*fromInteger basicNoteDurationS)/51200
-              "600" -> (7*fromInteger basicNoteDurationS)/25600
-              "60" -> (3*fromInteger basicNoteDurationS)/12800
+              "63" -> (15*fromInteger basicNoteDurationS)/51200
+              "62" -> (7*fromInteger basicNoteDurationS)/25600
+              "61" -> (3*fromInteger basicNoteDurationS)/12800
               "6" -> (fromInteger basicNoteDurationS)/6400
-              "7000" -> (15*fromInteger basicNoteDurationS)/102400
-              "700" -> (7*fromInteger basicNoteDurationS)/51200
-              "70" -> (3*fromInteger basicNoteDurationS)/25600
+              "73" -> (15*fromInteger basicNoteDurationS)/102400
+              "72" -> (7*fromInteger basicNoteDurationS)/51200
+              "71" -> (3*fromInteger basicNoteDurationS)/25600
               "7" -> (fromInteger basicNoteDurationS)/12800
               _ -> error "No_note\n"
                   in return bn
