@@ -94,7 +94,7 @@ durationF y = do
                   in return bn
                   
 ggg :: Double -> Integer -> Double
-ggg a b = (fromInteger $ round (4400*a**(fromInteger b)))/10
+ggg a b = (fromInteger $! round (4400*a**(fromInteger b)))/10
 
 pitchFrequency :: String -> String
 pitchFrequency x = case x of
@@ -159,13 +159,13 @@ tripleString noteInfo = do
                   where
                       thirdElem (x:y:z:zs) = if y == "t" 
                                then do 
-                                   duration2 <- durationF $ return x
+                                   duration2 <- durationF $! return x
                                    let s1 = " synth " ++ (show duration2) ++ " triangle " ++ (pitchFrequency z) ++ " gain -n -10\n" in return s1
                                else do
-                                   duration2 <- durationF $ return x
+                                   duration2 <- durationF $! return x
                                    let s2 = " synth " ++ (show duration2) ++ " sine " ++ (pitchFrequency z) ++ " gain -n -10\n" in return s2
                       thirdElem (x:xs) = do
-                                   duration2 <- durationF $ return x
+                                   duration2 <- durationF $! return x
                                    let s3 = " synth " ++ (show duration2) ++ " sine 440 bandreject 440 440\n" in return s3
                       thirdElem _ = return ("No_note\n")     
 
