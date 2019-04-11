@@ -1,7 +1,7 @@
 {-
 MIT License
 
-Copyright (c) 2018 OleksandrZhabenko
+Copyright (c) 2018,2019 OleksandrZhabenko
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,8 @@ SOFTWARE.
 -}
 
 import System.CPUTime
-import Control.Monad
+import Control.Monad 
+import System.Process (callCommand)
 
 additionalF :: Num a => [a] -> a
 additionalF [] = 0
@@ -176,4 +177,4 @@ zFunction noteInfo time = do
                 let t1 = 10000000000 + (t `div` 10000000) in
                      return ("sox -n " ++ (show t1) ++ ".flac" ++ nI)
 
-main = writeFile "melody" "\n" >> replicateM_ 20000 (zFunction getLine getCPUTime >>= appendFile "melody") 
+main = replicateM_ 20000 (zFunction getLine getCPUTime >>= callCommand) 
